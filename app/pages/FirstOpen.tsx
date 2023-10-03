@@ -17,20 +17,34 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-function FirstOpen(): JSX.Element {
+function FirstOpen({ navigation }): JSX.Element {
     return(
         <View>
             <Image
                 style={styles.logo}
                 source={require('../front/img/logo.png')}
             />
+
             <View style={styles.buttoncontenair}>
+
                 <TouchableOpacity style={styles.button}>
-                    <Text>Login</Text>
+                    <Text
+                        style={styles.textButton}
+                        onPress={() => {
+                            navigation.navigate("Login")
+                        }}
+                    >Login</Text>
                 </TouchableOpacity>
+
                 <TouchableOpacity style={styles.button}>
-                    <Text>Sign up</Text>
+                    <Text
+                        style={styles.textButton}
+                        onPress={() => {
+                              navigation.navigate("SignUp")
+                        }}>
+                        Sign up</Text>
                 </TouchableOpacity>
+
             </View>
         </View>
     )
@@ -45,11 +59,18 @@ const styles = StyleSheet.create({
         justifyContent: "center",
     },
     buttoncontenair:{
+        marginTop: "40%",
         display: "flex",
     },
+    textButton:{
+        fontSize: 25,
+        textAlign: "center",
+    },
     button:{
+        borderRadius: 10,
         margin: 15,
         padding: 10,
+        backgroundColor: "#a2d2ff",
     }
 });
 

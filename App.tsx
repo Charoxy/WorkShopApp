@@ -27,6 +27,8 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FirstOpen from "./app/pages/FirstOpen";
+import Login from "./app/pages/Login";
+import SignUp from "./app/pages/SignUp";
 
 
 const Stack = createNativeStackNavigator();
@@ -35,10 +37,10 @@ function App(): JSX.Element {
   return(
       <NavigationContainer>
         <Stack.Navigator
-            screenOptions={{
-              headerShown: false
-            }}>
-          <Stack.Screen name="FirstPage" component={FirstOpen} />
+            screenOptions={{headerShown: true}}>
+            <Stack.Screen name="FirstPage" component={FirstOpen} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="SignUp" component={SignUp} />
         </Stack.Navigator>
       </NavigationContainer>
       )
