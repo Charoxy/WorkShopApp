@@ -1,7 +1,11 @@
 import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import React from "react";
 
-function SignUp(): JSX.Element {
+function SignUp({ navigation }): JSX.Element {
+
+    const [mdp, setMdp] = useState("");
+    const [email, setEmail] = useState("");
+
     return(
         <SafeAreaView>
             <Image style={styles.miniLogo} source={require("../front/img/mini_logo.png")}></Image>
@@ -10,7 +14,17 @@ function SignUp(): JSX.Element {
                 <TextInput style={styles.textInput} placeholder={"E-mail"}></TextInput>
                 <TextInput style={styles.textInput} placeholder={"Mots de passe"}></TextInput>
                 <TextInput style={styles.textInput} placeholder={"Comfirmation de Mots de passe"}></TextInput>
-                <TouchableOpacity style={styles.suivantbutton}><Text style={styles.textButton}>Suivant</Text></TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.suivantbutton}
+                onPress={() => {
+                    navigation.navigate('signUpform', {
+                        email: email,
+                        mdp: mdp,
+                    })
+                }}>
+
+                    <Text style={styles.textButton}>Suivant</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )

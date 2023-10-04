@@ -29,6 +29,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import FirstOpen from "./app/pages/FirstOpen";
 import Login from "./app/pages/Login";
 import SignUp from "./app/pages/SignUp";
+import signUpform from './app/pages/Signupform';
+import Adress from "./app/pages/Adress";
 
 
 const Stack = createNativeStackNavigator();
@@ -41,6 +43,8 @@ function App(): JSX.Element {
             <Stack.Screen name="FirstPage" component={FirstOpen} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />
+            <Stack.Screen name="signUpform" component={signUpform}/>
+            <Stack.Screen name="Adress" component={Adress}/>
         </Stack.Navigator>
       </NavigationContainer>
       )
