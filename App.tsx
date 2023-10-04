@@ -39,7 +39,7 @@ function App(): JSX.Element {
   return(
       <NavigationContainer>
         <Stack.Navigator
-            screenOptions={{headerShown: true}}>
+            screenOptions={{headerShown: false}}>
             <Stack.Screen name="FirstPage" component={FirstOpen} />
             <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="SignUp" component={SignUp} />

@@ -12,6 +12,7 @@ function signUpform({ navigation , route }): JSX.Element {
 
     return (
         <SafeAreaView>
+            <Text>{email}</Text>
             <Image style={styles.miniLogo} source={require("../front/img/mini_logo.png")}></Image>
             <View style={styles.formContenair}>
                 <Text style={{textAlign: "center", fontSize: 25, fontWeight: "bold"}}>Mes informations :</Text>

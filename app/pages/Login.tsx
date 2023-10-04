@@ -1,10 +1,13 @@
 import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import React, {useState} from "react";
 
-const [mdp, setMdp] = useState("e");
-const [email, setEmail] = useState("e");
+
 
 function Login(): JSX.Element {
+
+    const [mdp, setMdp] = useState();
+    const [email, setEmail] = useState();
+
     return(
         <SafeAreaView>
             <Image style={styles.miniLogo} source={require("../front/img/mini_logo.png")}></Image>
@@ -16,7 +19,7 @@ function Login(): JSX.Element {
                            }}></TextInput>
                 <TextInput style={styles.textInput} placeholder={"Mots de passe"}
                            onChangeText={(text) => {
-                    setMdp(text)
+                               setMdp(text)
                 }}></TextInput>
                 <TouchableOpacity
                     style={styles.suivantbutton}>
