@@ -1,15 +1,15 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import Adress from "./Adress";
 import React from "react";
+import {SafeAreaView} from "react-native";
 
 function Home({ navigation }){
     const Tab = createBottomTabNavigator();
 
     return(
-        <Tab.Navigator>
-            <Tab.Screen name="Feed" component={Adress} />
-            <Tab.Screen name="Messages" component={Adress} />
-        </Tab.Navigator>
+        <SafeAreaView>
+
+        </SafeAreaView>
     )
 }
 

@@ -1,5 +1,6 @@
 import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import React, {useState} from "react";
+import axios from "axios/index";
 
 
 
@@ -22,8 +23,21 @@ function Login(): JSX.Element {
                                setMdp(text)
                 }}></TextInput>
                 <TouchableOpacity
-                    style={styles.suivantbutton}>
-                        <Text style={styles.textButton}>Connexion</Text></TouchableOpacity>
+                    style={styles.suivantbutton}
+                    onPress={() => {
+                        axios.post('http://10.60.136.113:3000/user/login', {
+                            MDP: mdp,
+                            Mail: email,
+                        })
+                            .then(function (response) {
+                                console.log(response.data)
+                            })
+                            .catch(function (error) {
+                                console.log(error);
+                            });
+                    }}>
+                    <Text style={styles.textButton}>Connexion</Text>
+                </TouchableOpacity>
             </View>
         </SafeAreaView>
     )

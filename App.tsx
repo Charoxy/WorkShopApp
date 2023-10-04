@@ -31,6 +31,8 @@ import Login from "./app/pages/Login";
 import SignUp from "./app/pages/SignUp";
 import signUpform from './app/pages/Signupform';
 import Adress from "./app/pages/Adress";
+import LogScreen from "./app/pages/screen/LogScreen";
+import HomeScreen from "./app/pages/screen/HomeScreen";
 
 
 const Stack = createNativeStackNavigator();
@@ -40,11 +42,8 @@ function App(): JSX.Element {
       <NavigationContainer>
         <Stack.Navigator
             screenOptions={{headerShown: false}}>
-            <Stack.Screen name="FirstPage" component={FirstOpen} />
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="SignUp" component={SignUp} />
-            <Stack.Screen name="signUpform" component={signUpform}/>
-            <Stack.Screen name="Adress" component={Adress}/>
+            <Stack.Screen name="Login" component={LogScreen}/>
+            <Stack.Screen name="Home" component={HomeScreen}/>
         </Stack.Navigator>
       </NavigationContainer>
       )

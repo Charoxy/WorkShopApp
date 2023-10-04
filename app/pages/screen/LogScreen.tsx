@@ -17,13 +17,13 @@ import {
     ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
-import FirstOpen from "./FirstOpen";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {NavigationContainer} from "@react-navigation/native";
 import Login from "../Login";
 import SignUp from "../SignUp";
-import signUpform from "../Signupform";
 import Adress from "../Adress";
+import FirstOpen from "../FirstOpen";
+import SignUpform from "../Signupform";
 
 const Stack = createNativeStackNavigator();
 
@@ -32,9 +32,9 @@ function LogScreen(){
             <Stack.Navigator
                 screenOptions={{headerShown: false}}>
                 <Stack.Screen name="FirstPage" component={FirstOpen} />
-                <Stack.Screen name="Login" component={Login} />
+                <Stack.Screen name="LoginForm" component={Login} />
                 <Stack.Screen name="SignUp" component={SignUp} />
-                <Stack.Screen name="signUpform" component={signUpform}/>
+                <Stack.Screen name="signUpform" component={SignUpform}/>
                 <Stack.Screen name="Adress" component={Adress}/>
             </Stack.Navigator>
     )

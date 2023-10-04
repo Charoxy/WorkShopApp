@@ -8,8 +8,11 @@ function HomeScreen() {
 
     return (
         <Tab.Navigator>
-            <Tab.Screen name="Feed" component={FirstOpen} />
-            <Tab.Screen name="Messages" component={FirstOpen} />
+            <Tab.Screen name="Home" component={FirstOpen} />
+            <Tab.Screen name="Sport" component={FirstOpen} />
+            <Tab.Screen name="Event" component={FirstOpen} />
+            <Tab.Screen name="Produit" component={FirstOpen} />
+            <Tab.Screen name="Account" component={FirstOpen} />
         </Tab.Navigator>
     );
 }

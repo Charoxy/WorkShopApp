@@ -2,7 +2,7 @@ import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View
 import React, {useState} from "react";
 
 // @ts-ignore
-function signUpform({ navigation , route }): JSX.Element {
+function SignUpform({ navigation , route }): JSX.Element {
 
     const [Name, setName] = useState("");
     const [Surname, setSurname] = useState("");
@@ -87,4 +87,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default signUpform;
+export default SignUpform;
