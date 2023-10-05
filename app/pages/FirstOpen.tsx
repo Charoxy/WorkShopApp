@@ -31,7 +31,8 @@ function FirstOpen({ navigation }): JSX.Element {
                     <Text
                         style={styles.textButton}
                         onPress={() => {
-                            navigation.navigate("Login")
+                            console.log("rrr")
+                            navigation.navigate("LoginForm")
                         }}
                     >Login</Text>
                 </TouchableOpacity>
