@@ -1,6 +1,7 @@
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import FirstOpen from "../FirstOpen";
 import React from "react";
+import Account from "../Account";
 
 function HomeScreen() {
 
@@ -12,7 +13,7 @@ function HomeScreen() {
             <Tab.Screen name="Sport" component={FirstOpen} />
             <Tab.Screen name="Event" component={FirstOpen} />
             <Tab.Screen name="Produit" component={FirstOpen} />
-            <Tab.Screen name="Account" component={FirstOpen} />
+            <Tab.Screen name="Account" component={Account} />
         </Tab.Navigator>
     );
 }

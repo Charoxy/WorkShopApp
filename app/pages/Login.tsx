@@ -4,7 +4,7 @@ import axios from "axios/index";
 
 
 
-function Login(): JSX.Element {
+function Login({navigation}): JSX.Element {
 
     const [mdp, setMdp] = useState();
     const [email, setEmail] = useState();
@@ -31,6 +31,7 @@ function Login(): JSX.Element {
                         })
                             .then(function (response) {
                                 console.log(response.data)
+                                navigation.navigate("Home")
                             })
                             .catch(function (error) {
                                 console.log(error);

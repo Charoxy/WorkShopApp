@@ -1,11 +1,9 @@
 import {Image, SafeAreaView, StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 import React, {useState} from "react";
 import axios from 'axios';
-import {NavigationContainer} from "@react-navigation/native";
-import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 
 // @ts-ignore
-function Adress({navigation,route}): JSX.Element {
+function Adress({route}): JSX.Element {
 
     const {email,mdp,surname,name,phoneNumber} = route.params
 
@@ -14,11 +12,10 @@ function Adress({navigation,route}): JSX.Element {
     const [num, setNum] = useState<String>("")
     const [voie, setVoie,] = useState<String>("")
 
-    const Tab = createBottomTabNavigator();
-
+    const {} = route.params
+    
     return (
         <SafeAreaView>
-            <Text>{email}</Text>
             <Image style={styles.miniLogo} source={require("../front/img/mini_logo.png")}></Image>
             <View style={styles.formContenair}>
                 <Text style={{textAlign: "center", fontSize: 25, fontWeight: "bold"}}>Mon Adresse :</Text>
@@ -30,7 +27,7 @@ function Adress({navigation,route}): JSX.Element {
                     style={styles.signUpButton}
                     onPress={() => {
                         // Request Axios + changement de stack de page
-                        axios.post('http://10.60.136.113:3000/user/singup', {
+                        axios.post('http:// 10.60.136.113/user/singup', {
                             Utilisateur: name + surname,
                             Mail: email,
                             Numero: phoneNumber,
@@ -40,7 +37,7 @@ function Adress({navigation,route}): JSX.Element {
                             address: num + " " +voie + ville + cp,
                         })
                             .then(function (response) {
-                                navigation.navigate("Home")
+                                console.log(response);
                             })
                             .catch(function (error) {
                                 console.log(error);
