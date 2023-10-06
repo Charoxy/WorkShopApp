@@ -25,12 +25,14 @@ function Login({navigation}): JSX.Element {
                 <TouchableOpacity
                     style={styles.suivantbutton}
                     onPress={() => {
-                        axios.post('http://10.60.136.113:3000/user/login', {
+                        console.log("test")
+                        axios.post('http://10.60.136.201:3000/user/login', {
                             MDP: mdp,
                             Mail: email,
                         })
                             .then(function (response) {
                                 console.log(response.data)
+
                                 navigation.navigate("Home")
                             })
                             .catch(function (error) {

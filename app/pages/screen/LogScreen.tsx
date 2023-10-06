@@ -30,7 +30,7 @@ const Stack = createNativeStackNavigator();
 function LogScreen(){
     return(
             <Stack.Navigator
-                screenOptions={{headerShown: false}}>
+                screenOptions={{headerShown: true}}>
                 <Stack.Screen name="FirstPage" component={FirstOpen} />
                 <Stack.Screen name="LoginForm" component={Login} />
                 <Stack.Screen name="SignUp" component={SignUp} />

@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import axios from 'axios';
 
 // @ts-ignore
-function Adress({route}): JSX.Element {
+function Adress({navigation, route}): JSX.Element {
 
     const {email,mdp,surname,name,phoneNumber} = route.params
 
@@ -27,7 +27,7 @@ function Adress({route}): JSX.Element {
                     style={styles.signUpButton}
                     onPress={() => {
                         // Request Axios + changement de stack de page
-                        axios.post('http:// 10.60.136.113/user/singup', {
+                        axios.post('http://10.60.136.201:3000/user/singup', {
                             Utilisateur: name + surname,
                             Mail: email,
                             Numero: phoneNumber,
@@ -38,6 +38,7 @@ function Adress({route}): JSX.Element {
                         })
                             .then(function (response) {
                                 console.log(response);
+                                navigation.navigate("Home")
                             })
                             .catch(function (error) {
                                 console.log(error);

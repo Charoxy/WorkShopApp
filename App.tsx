@@ -41,7 +41,7 @@ function App(): JSX.Element {
   return(
       <NavigationContainer>
         <Stack.Navigator
-            screenOptions={{headerShown: false}}>
+        screenOptions={{headerShown: false}}>
             <Stack.Screen name="Login" component={LogScreen}/>
             <Stack.Screen name="Home" component={HomeScreen}/>
         </Stack.Navigator>
